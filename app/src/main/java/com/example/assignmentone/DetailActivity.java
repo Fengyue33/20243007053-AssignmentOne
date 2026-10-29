@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+/** Displays the selected topic using data from resource arrays. */
 public class DetailActivity extends AppCompatActivity {
 
     @Override

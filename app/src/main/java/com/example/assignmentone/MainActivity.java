@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+/** Displays the CampusLife home screen and opens the selected topic. */
 public class MainActivity extends AppCompatActivity {
-
+    // Topic order matches arrays.xml: Facilities=0, Events=1, Clubs=2, Support=3.
     public static final String EXTRA_TOPIC_INDEX =
             "com.example.assignmentone.TOPIC_INDEX";
 
