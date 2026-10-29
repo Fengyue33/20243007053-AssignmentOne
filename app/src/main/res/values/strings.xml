@@ -5,4 +5,8 @@
     <string name="label_events">Events</string>
     <string name="label_clubs">Clubs</string>
     <string name="label_support">Support</string>
+    <string name="facilities_clicked">Facilities clicked</string>
+    <string name="events_clicked">Events clicked</string>
+    <string name="clubs_clicked">Clubs clicked</string>
+    <string name="support_clicked">Support clicked</string>
 </resources>
