@@ -9,4 +9,6 @@
     <string name="events_clicked">Events clicked</string>
     <string name="clubs_clicked">Clubs clicked</string>
     <string name="support_clicked">Support clicked</string>
+    <string name="detail_placeholder_title">This is a title</string>
+    <string name="detail_placeholder_content">This is content</string>
 </resources>
