@@ -1,19 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 上半部分：图片与欢迎文字叠放 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_main_banner" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/home_welcome"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+    </FrameLayout>
+
+    <!-- 下半部分：两行两列，自动分配空间 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="2"
+        android:useDefaultMargins="true">
+
+        <!-- Facilities -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/button_facilities"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/button_background"
+                android:contentDescription="@string/label_facilities"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_btn_facilities" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_facilities"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!-- Events -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/button_events"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/button_background"
+                android:contentDescription="@string/label_events"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_btn_events" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_events"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!-- Clubs -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/button_clubs"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/button_background"
+                android:contentDescription="@string/label_clubs"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_btn_clubs" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_clubs"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <!-- Support -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_rowWeight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/button_support"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/button_background"
+                android:contentDescription="@string/label_support"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_btn_support" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_support"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </GridLayout>
+
+</LinearLayout>
